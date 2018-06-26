@@ -1,18 +1,19 @@
 name := "spark-hyperloglog"
 
-version := scala.io.Source.fromFile("VERSION").mkString
+version := scala.io.Source.fromFile("VERSION").mkString.stripLineEnd
 
 scalaVersion := "2.11.8"
 
 organization := "com.mozilla.telemetry"
 
+// As required by https://github.com/databricks/sbt-spark-package#spark-package-developers
+spName := "mozilla/spark-hyperloglog"
 sparkVersion := "2.0.2"
-
-sparkComponents ++= Seq("core", "sql")
+sparkComponents ++= Seq("sql")
 
 libraryDependencies ++= Seq(
   "org.scalatest" %% "scalatest" % "2.2.6" % "test",
-  "com.twitter" %% "algebird-core" % "0.12.0"
+  "com.twitter" %% "algebird-core" % "0.13.4"
 )
 
 credentials += Credentials(Path.userHome / ".ivy2" / ".sbtcredentials")
