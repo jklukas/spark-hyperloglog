@@ -7,7 +7,7 @@ scalaVersion := "2.11.8"
 organization := "com.mozilla.telemetry"
 
 // As required by https://github.com/databricks/sbt-spark-package#spark-package-developers
-spName := "mozilla/spark-hyperloglog"
+spName := "jklukas/spark-hyperloglog"
 sparkVersion := "2.0.2"
 sparkComponents ++= Seq("sql")
 

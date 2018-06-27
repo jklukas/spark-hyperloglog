@@ -59,7 +59,7 @@ setup(
     url='https://github.com/mozilla/spark-hyperloglog',
     packages=[
         'pyspark_hyperloglog',
-        'pyspark.jars'
+        'pyspark_hyperloglog.jars'
     ],
     install_requires=['pyspark'],
     extras_require={
@@ -71,10 +71,10 @@ setup(
     include_package_data=True,
     package_dir={
         'pyspark_hyperloglog': 'src',
-        'pyspark.jars': 'deps/jars'
+        'pyspark_hyperloglog.jars': 'deps/jars'
     },
     package_data={
-        'pyspark.jars': ['*.jar']
+        'pyspark_hyperloglog.jars': ['*.jar']
     },
 )
 
